@@ -1,24 +1,13 @@
-# README
+# ruby-splitclient-demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a demo rails app that reproduces an issue with the Split.io Ruby SDK.
 
-Things you may want to cover:
+Using ruby version `2.6.9` and bundler `2.3.6`.
 
-* Ruby version
+To reproduce the problem, add `.env` file with split API key
 
-* System dependencies
+```
+SPLIT_IO_API_KEY=<api key>
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+And then run `bundle install` and `bundle exec puma`.  The server will block on startup for 10 seconds and then exit.  The Split.io client log will be in `logfile.log`.
