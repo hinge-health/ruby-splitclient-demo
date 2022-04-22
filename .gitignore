@@ -1,0 +1,67 @@
+# Ignore bundler config.
+/.bundle
+
+# ignore bundler venror/cache
+/vendor/cache/
+
+# credentials and environment settings
+/.env
+/.env.local
+/.env.rediscloud_url
+/.env.test.local
+/postgres.env
+/.aptible.env
+
+# Ignore the default SQLite database.
+/db/test.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+brakeman.log
+jmeter.log
+
+# dev tools artifacts
+erd.pdf
+.byebug_history
+
+/public/system/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+*.DS_Store
+/coverage/
+/doc/
+.yardoc/
+
+*.sh
+!sneakers.sh
+/latest.dump
+/dump.rdb
+/db/structure.sql
+/notes.txt
+/public/assets/
+/node_modules
+
+#Ignore IDE settings
+.idea/
+.vscode/
+.tool-versions
+
+# store of failed examples
+spec/examples.txt
+
+# Knapsack reports
+knapsack_rspec_report.json
+
+# Cypress
+log/
+uitests/node_modules
+uitests/cypress/videos
+uitests/cypress/screenshots
+
+# scaling input and output files (usually CSV of users, coaches, or super admins)
+scaling/input
+scaling/automated-tests
